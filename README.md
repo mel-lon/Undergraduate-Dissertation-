@@ -4,9 +4,14 @@ The data collection and modelling of my dissertation work
 
 
 ## Key links
-As predicted: https://aspredicted.org/see_one.php
+As predicted: https://aspredicted.org/see_one.php <br> 
 Literature review: https://docs.google.com/document/d/1D8lowquL35KQ_geMCKTUpWZSkb5tWubXY3LjdZxphUQ/edit 
 
 ## Roadmap
+
+[] Write up
+[] Collecting the data
+[] Meeting with Yara
+
 
 ## Getting started
