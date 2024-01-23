@@ -9,9 +9,9 @@ Literature review: https://docs.google.com/document/d/1D8lowquL35KQ_geMCKTUpWZSk
 
 ## Roadmap
 
-[] Write up
-[] Collecting the data
-[] Meeting with Yara
+[x] Write up
+[x] Collecting the data
+[x] Meeting with Yara
 
 
 ## Getting started
