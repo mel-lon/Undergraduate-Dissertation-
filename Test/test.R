@@ -1,19 +1,20 @@
-# Load the necessary packages
-library(lme4)
+# Load the required packages
+library(dplyr)
+library(tidyr)
+library(stats)
 
 # Load the dataset
-file_path <- "/Users/admin/Documents/University/diss-data-collection/Classifier/Sample/finaldataset_rounded.csv"
+file_path <- "/Users/admin/Downloads/coded_sample.csv"
 data <- read.csv(file_path)
 
-# Convert non-numeric values to NA in the 'engagement' column
-data$engagement <- as.numeric(data$engagement)
+# Calculate log_engagement from score and num_comments
+data$log_engagement <- log(data$score + data$num_comments + 1)
 
-# Drop rows with missing values
-data <- na.omit(data)
+# Construct the logistic regression model
+logit_model <- glm(PSR ~ log_engagement + top_level_comment + has_flair, data = data, family = binomial)
 
-# Fit the mixed effects logistic regression model
-model <- glmer(Parasocial_Language~ engagement + gender + subreddit + random_speaker
-               data = data)
+# Predict probabilities
+predicted_probabilities <- predict(logit_model, type = "response")
 
-# Print the model summary
-print(summary(model))
+# Output the predicted probabilities
+head(predicted_probabilities)
